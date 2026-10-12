@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Shop — Китайський чай</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">МИСТЕЦТВО КИТАЙСЬКОГО ЧАЮ</p>
+            <h1>Tea Shop</h1>
+            <p class="subtitle">Знайди свій ідеальний чай</p>
+            <a href="#catalog" class="hero-button">Переглянути колекцію</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart" id="cart">
+            <div class="cart-heading">
+                <p class="eyebrow">ТВОЄ ЗАМОВЛЕННЯ</p>
+                <h2>Кошик</h2>
+            </div>
+
+            <div class="cart-summary">
+                <p>Кількість: <strong id="cart-count">0</strong></p>
+                <p>Разом: <strong id="cart-total">0 грн</strong></p>
+            </div>
+
+            <div id="cart-items" class="cart-items"></div>
+
+            <button id="checkout-button" class="checkout-button" disabled>
+                Оформити замовлення
+            </button>
+
+            <p id="checkout-message" class="checkout-message" role="status"></p>
+        </section>
+
+        <section class="catalog" id="catalog">
+            <div class="catalog-heading">
+                <div>
+                    <p class="eyebrow">НАША КОЛЕКЦІЯ</p>
+                    <h2>Китайський чай</h2>
+                </div>
+                <p class="catalog-count">
+                    Знайдено: <span id="products-count">3</span>
+                </p>
+            </div>
+
+            <div class="catalog-controls">
+                <input
+                    id="search"
+                    type="search"
+                    placeholder="Шукати чай..."
+                    aria-label="Шукати чай"
+                >
+
+                <select id="price-filter" aria-label="Фільтр за ціною">
+                    <option value="all">Усі ціни</option>
+                    <option value="600">До 600 грн</option>
+                    <option value="700">До 700 грн</option>
+                    <option value="800">До 800 грн</option>
+                </select>
+            </div>
+
+            <div id="products" class="products"></div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Tea Shop</h2>
+        <p>Відкрий культуру китайського чаю.</p>
+        <a href="#catalog">Повернутися до колекції ↑</a>
+    </footer>
+
+</body>
+</html>
+
